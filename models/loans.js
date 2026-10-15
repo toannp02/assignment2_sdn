@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const loanSchema = new mongoose.Schema(
   {
     member_id: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId.toString(),
       ref: "Member",
       required: true,
     },
@@ -11,7 +11,7 @@ const loanSchema = new mongoose.Schema(
       type: [
         {
           book_id: {
-            type: mongoose.Schema.Types.ObjectId,
+            type: mongoose.Schema.Types.ObjectId.toString(),
             ref: "Book",
             required: true,
           },
